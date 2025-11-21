@@ -276,7 +276,14 @@ for msg in st.session_state["messages"]:
     if msg["role"] == "user":
         st.markdown(
             f"""
-<div style="background-color:#e3f2fd; padding:8px 12px; border-radius:8px; margin-bottom:6px;">
+<div style="
+    background-color:#1976d2;  /* Box background color */
+    color:black;               /* Text color */
+    padding:10px 15px; 
+    border-radius:10px; 
+    margin-bottom:8px;
+    font-weight:bold;
+">
     <strong>You:</strong> {msg['text']}
 </div>
 """,
@@ -285,7 +292,7 @@ for msg in st.session_state["messages"]:
     else:
         st.markdown(
             f"""
-<div style="background-color:#f1f8e9; padding:8px 12px; border-radius:8px; margin-bottom:6px;">
+<div style="background-color:black; padding:8px 12px; border-radius:8px; margin-bottom:6px;">
     <strong>Bot:</strong> {msg['text']}
 </div>
 """,
